@@ -30,23 +30,32 @@ h2{
 }
 .navbar-toggle .icon-bar{
 	background: #fff;
-}
-.navbar-nav>li{
-	margin:0 16px;
-}
+} 
 .navbar-nav>li a{
 	font-family: Droid Sans;
-	font-weight: bold;
-	padding:0;
-	line-height: 98px;
+	position: relative;
+	font-weight: bold; 
+	line-height: 70px;
 	color: #fff;
 	font-size: 13px;
-	text-transform: uppercase;
-	border-top: 2px solid transparent;
+	text-transform: uppercase; 
 }
-.navbar-nav>li:hover a{
-	border-top: 2px solid #4bcaff;
+.navbar-nav>li a:after{
+	content: " ";
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 2px; 
+	width: 0;
+	background: #4bcaff;
+	transition:300ms all ease;
+}
+.navbar-nav>li:hover a{ 
 	color: #4bcaff;  
+}
+.navbar-nav>li:hover a:after{ 
+	width: 100%;
+	left: 0;
 }
 .nav>li>a:hover,
 .nav>li>a:focus{
